@@ -1,0 +1,76 @@
+table th {
+    text-align: left;
+    background-color: #3a6070;
+    color: #FFF;
+    padding: 4px 30px 4px 8px;
+}
+
+table td {
+    border: 1px solid #e3e3e3;
+    padding: 4px 8x;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr:nth-child(odd) td {
+    background-color: #e7edf0;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#newBookContainer {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.removeButton {
+    background-color: crimson;
+    color: white;
+}
+
+.removeButton:hover {
+    cursor: pointer;
+}
+
+#changeStatus {
+    background-color: lightgray;
+    outline: none;
+    padding: 5px 15px;
+}
+#changeStatus:active {
+    outline: none;
+}
+
+#changeStatus:hover {
+    cursor: pointer;
+}
+
+#addBook:hover {
+    cursor: pointer;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#newBook {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid #3a6070;
+    background: none;
+    background-color: #3a6070;
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #fff;;
+    transition: 0.8s;
+}
+
+#newBook:hover {
+    background-color: #fff;
+    color: #3a6070;
+}
