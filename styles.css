@@ -74,3 +74,8 @@ button:hover {
     background-color: #fff;
     color: #3a6070;
 }
+
+input:invalid{
+    border-color: #900;
+    background-color: #FDD;
+  }

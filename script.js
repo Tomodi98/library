@@ -61,27 +61,30 @@ function addBook () {
   let pages = document.getElementById('pages').value;
   let isRead = document.getElementById("isRead");
 
-  addBookToLibrary(title, author, pages, isRead.checked);
+  if (title && author && pages) {
 
-  let tb = document.getElementById('books');
-  let tr = tb.insertRow(1);
+    addBookToLibrary(title, author, pages, isRead.checked);
 
-  let cell = tr.insertCell(0);
-  let cell1 = tr.insertCell(1);
-  let cell2 = tr.insertCell(2);
-  let cell3 = tr.insertCell(3);
+    let tb = document.getElementById('books');
+    let tr = tb.insertRow(1);
 
-  cell.innerHTML ='<input type="button" value="-" onclick="deleteBook(this)" class="removeButton">' + title;
-  cell1.innerHTML = author;
-  cell2.innerHTML = pages;
+    let cell = tr.insertCell(0);
+    let cell1 = tr.insertCell(1);
+    let cell2 = tr.insertCell(2);
+    let cell3 = tr.insertCell(3);
 
-  if (isRead.checked) {
-    cell3.innerHTML = '<input type="button" value="Yes" onclick="changeStatus(this)" id="changeStatus">';
-    changeColor(document.getElementById('changeStatus'), 'rgba(0, 128, 0, 0.438)');
-  }
-  else {
-    cell3.innerHTML = '<input type="button" value="No" onclick="changeStatus(this)" id="changeStatus">';
-    changeColor(document.getElementById('changeStatus'), 'rgba(178, 34, 34, 0.438)');
+    cell.innerHTML ='<input type="button" value="-" onclick="deleteBook(this)" class="removeButton">' + title;
+    cell1.innerHTML = author;
+    cell2.innerHTML = pages;
+
+    if (isRead.checked) {
+      cell3.innerHTML = '<input type="button" value="Yes" onclick="changeStatus(this)" id="changeStatus">';
+      changeColor(document.getElementById('changeStatus'), 'rgba(0, 128, 0, 0.438)');
+    }
+    else {
+      cell3.innerHTML = '<input type="button" value="No" onclick="changeStatus(this)" id="changeStatus">';
+      changeColor(document.getElementById('changeStatus'), 'rgba(178, 34, 34, 0.438)');
+    }
   }
 }
 
